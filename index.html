@@ -130,10 +130,17 @@
             <span style="display: inline-block; width: 28%; text-align: right;">Mar 2024 – Nov 2024</span>
         </p>
         <p>
-            Developed a <strong>Dynamic MAC re-randomization protocol</strong> in mac80211 to prevent device tracking in Wi-Fi networks. 
-            Integrated <strong>wmediumd</strong> with <strong>Mininet-WiFi</strong> and customized the kernel to implement protocol and realistic testing. 
-            Conducted experiments on protocol stability and performance, demonstrating enhanced privacy and resilience.
+            Modern wireless networks rely on <strong>MAC addresses for device identification</strong>, but once a device completes authentication, its MAC address remains static, making it <strong>susceptible to long-term tracking</strong>. Existing MAC randomization techniques only protect devices <strong>before association</strong> and fail to provide privacy <strong>during an active connection</strong>. My research proposes an <strong>AP-triggered MAC re-randomization protocol</strong>, ensuring that MAC addresses <strong>change dynamically even after key negotiation</strong>, mitigating tracking risks in real-time while preserving seamless connectivity.
         </p>
+        
+        <p>
+            To validate this approach, I implemented <strong>kernel-level modifications in mac80211</strong> and conducted extensive simulations using <strong>Mininet-WiFi, mac80211_hwsim, and wmediumd</strong>. Results showed that without re-randomization, devices were <strong>100% trackable</strong> in all network conditions. With the proposed AP-triggered scheme, MAC linkability was <strong>reduced from 100% (1 station) to 15% (11 stations)</strong>, making large-scale device tracking infeasible. <strong>Performance evaluations demonstrated minimal overhead</strong>, with an <strong>average UDP packet loss below 0.1% and stable throughput (~30 Mbps)</strong>, confirming the protocol's practical feasibility.
+        </p>
+        
+        <p>
+            This work <strong>bridges the gap between security research and real-world implementation</strong>, providing a <strong>lightweight, scalable solution</strong> to improve <strong>WiFi privacy at scale</strong>. Future work includes <strong>hardware validation, adaptive re-randomization intervals</strong>, and <strong>exploring AI-driven anomaly detection</strong> to counter evolving tracking techniques.
+        </p>
+        
         <li><a href="https://github.com/raghava-2002/Enterprise-Network-Penetration-Testing" target="_blank" rel="noopener noreferrer"> <strong>Enterprise Network Penetration Testing (Capture The Flag)</strong> </a></li>
         <p>
             <span style="display: inline-block; width: 70%;">Course Project, KTH Royal Institute of Technology</span>
