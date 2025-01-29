@@ -154,15 +154,46 @@
             techniques. The project emphasized post-exploitation tactics, lateral movement, and credential dumping, reflecting 
             industry-standard red teaming methodologies.
         </p>
-        <li><strong>Building Networked System Security</strong></li>
+        <li><a href="https://github.com/raghava-2002/Scalable-and-Secure-Network-Infrastructure-for-Distributed-Offices" target="_blank" rel="noopener noreferrer"> <strong>Scalable and Secure Network Infrastructure for Distributed Offices</strong> </a></li>
         <p>
             <span style="display: inline-block; width: 70%;">Course Project, KTH Royal Institute of Technology</span>
             <span style="display: inline-block; width: 28%; text-align: right;">Jan 2023 – Mar 2023</span>
         </p>
-        <p>
+        <!--<p>
             Designed a secure network solution for remote office data exchange. Configured <strong>OpenVPN</strong> for secure access, 
             implemented <strong>WPA2 Enterprise</strong> for wireless communication, and set up <strong>Docker containers</strong> for service isolation. 
             Deployed <strong>OpenWRT</strong> for access control, and integrated <strong>SNORT</strong> for intrusion detection.
+        </p>-->
+
+        <p>
+            As part of the Building Networked Systems Security (BNSS) course at KTH, this project involved designing and implementing a 
+            robust, enterprise-level <strong>secure network infrastructure</strong> for ACME Scandinavia. The goal was to provide <strong>secure remote access, 
+            identity-based authentication, intrusion detection, and encrypted communication</strong> across distributed office branches.
+        </p>
+        
+        <p>
+            The solution utilized a <strong>layered security approach</strong> by integrating multiple security components. A 
+            <strong>site-to-site OpenVPN tunnel</strong> was deployed to establish a <strong>secure connection between Stockholm and London branches</strong>, ensuring 
+            encrypted traffic between the two locations. Additionally, remote workers were provided <strong>certificate-based authentication via 
+            FreeRADIUS</strong>, preventing unauthorized access.
+        </p>
+        
+        <p>
+            To <strong>protect against network intrusions</strong>, an <strong>Intrusion Detection System (IDS) using SNORT</strong> was implemented. Two separate SNORT 
+            instances were deployed to monitor both the <strong>physical network traffic and VPN connections</strong>, allowing real-time detection of malicious 
+            activity. All alerts were logged and could be further analyzed using Wireshark.
+        </p>
+        
+        <p>
+            The system also featured a <strong>reverse proxy with strict firewall rules</strong>, ensuring that only authorized users could access internal 
+            resources. Secure file exchange and communication were facilitated through a self-hosted <strong>Nextcloud instance</strong>, which was protected by 
+            <strong>two-factor authentication (2FA)</strong> to prevent unauthorized access. Additionally, <strong>Secure DNS (DoH via Cloudflare)</strong> was implemented to 
+            mitigate DNS spoofing attacks.
+        </p>
+        
+        <p>
+            <strong>Key Outcomes:</strong> The designed architecture successfully established a scalable, high-security enterprise network that prevented 
+            unauthorized access, secured sensitive data, and allowed seamless remote access without compromising security.
         </p>
 
         <li><strong>Facial Recognition-Based Classroom Attendance System</strong></li>
